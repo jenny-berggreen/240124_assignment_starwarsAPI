@@ -1,6 +1,11 @@
 body {
-	padding-left: var(--spacing-large);
-	padding-right: var(--spacing-large);
+	background: url(../assets/images/fast_stars_background.jpeg) no-repeat center center fixed; 
+	background-size: cover;
+}
+
+h1 {
+	font-size: 40px;
+	font-family: 'Inter-Bold';
 }
 
 .grid-container {
@@ -14,6 +19,14 @@ body {
 .grid-item {
 	border-radius: var(--border-radius);
 	text-align: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.grid-item-category {
+	font-size: 30px;
 }
 
 .grid-container h1 {
@@ -41,6 +54,14 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+	h1 {
+		font-size: 30px;
+	}
+
+	.grid-item-category {
+		font-size: 25px;
+	}
+
 	.grid-container {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: 2fr 2fr 2fr 0.5fr;
@@ -64,6 +85,14 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 20px;
+	}
+
+	.grid-item-category {
+		font-size: 20px;
+	}
+
 	body {
 		padding: 0;
 	}
