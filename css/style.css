@@ -1,0 +1,45 @@
+body {
+	padding-left: var(--spacing-large);
+	padding-right: var(--spacing-large);
+}
+
+.grid-container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	gap: var(--spacing-small);
+}
+
+.grid-item {
+	border-radius: var(--border-radius);
+	text-align: center;
+}
+
+.grid-container h1 {
+	grid-area: 2 / 2 / 3 / 4;
+}
+
+#films {
+	background-color: var(--color-accent1);
+	grid-area: 4 / 1 / 6 / 2;
+}
+
+#people {
+	background-color: var(--color-accent2);
+	grid-area: 4 / 2 / 6 / 3;
+}
+
+#planets {
+	background-color: var(--color-accent3);
+	grid-area: 4 / 3 / 6 / 4;
+}
+
+#vehicles {
+	background-color: var(--color-accent4);
+	grid-area: 4 / 4 / 6 / 5;
+}
+
+@media only screen and (max-width: 768px) {
+	
+}
