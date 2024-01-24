@@ -1,0 +1,21 @@
+:root {
+	--font-size-base: 1rem;
+
+	--color-foreground: #000000;
+	--color-background: #ffffff;
+
+	--color-accent1: #b1c5ff;
+	--color-accent2: #b6ffc0;
+	--color-accent3: #f2b3ff;
+	--color-accent4: #2de6ff;
+
+	--border-radius: 5px;
+	--border-radius-max: 50px;
+
+	--spacing-x-small: 0.5rem;
+	--spacing-small: 1rem;
+	--spacing-medium: 1.5rem;
+	--spacing-large: 2rem;
+	--spacing-larger: 3rem;
+	--spacing-largest: 4rem;
+}
