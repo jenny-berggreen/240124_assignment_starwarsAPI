@@ -4,10 +4,7 @@
 	--color-foreground: #000000;
 	--color-background: #ffffff;
 
-	--color-accent1: #b1c5ff;
-	--color-accent2: #b6ffc0;
-	--color-accent3: #f2b3ff;
-	--color-accent4: #2de6ff;
+	--color-primary: #yellow;
 
 	--border-radius: 5px;
 	--border-radius-max: 50px;
