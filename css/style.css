@@ -13,10 +13,13 @@ h1 {
 
 .grid-container {
 	display: grid;
-	height: 100vh;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: 2fr 2fr 1fr;
 	gap: var(--spacing-small);
+}
+
+.grid-container__sub-page {
+	height: 150vh;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 0.5fr 1fr 1fr;
 }
 
 .grid-item {
