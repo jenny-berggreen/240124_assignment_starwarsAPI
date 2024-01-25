@@ -32,7 +32,7 @@ h1 {
 	background-color: rgba(0, 0, 0, 0.7);
 	border: solid 3px yellow;
 	border-radius: var(--border-radius);
-	
+
 	color: white;
 }
 
@@ -89,7 +89,7 @@ h1 {
 
 @media only screen and (max-width: 600px) {
 	h1 {
-		font-size: 20px;
+		font-size: 25px;
 	}
 
 	.grid-item-category {
