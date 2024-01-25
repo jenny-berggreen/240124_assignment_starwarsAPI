@@ -42,6 +42,8 @@
 	grid-area: 2 / 4 / 3 / 5;
 }
 
+/* -------------------------------- medium screens  ------------------------------------- */
+
 @media only screen and (max-width: 1024px) {
 	.grid-item-category {
 		font-size: 25px;
@@ -68,6 +70,8 @@
 		grid-area: 3 / 2 / 4 / 3;
 	}
 }
+
+/* -------------------------------- small screens ------------------------------------- */
 
 @media only screen and (max-width: 600px) {
 	.grid-item-category {
