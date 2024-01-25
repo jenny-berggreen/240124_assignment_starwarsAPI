@@ -1,0 +1,44 @@
+body {
+	background: url(../assets/images/fast_stars_background.jpeg) no-repeat center center fixed; 
+	background-size: cover;
+	padding-left: var(--spacing-medium);
+	padding-right: var(--spacing-medium);
+}
+
+h1 {
+	font-size: 40px;
+	font-family: 'Inter-Bold';
+	color: yellow;
+}
+
+.grid-container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 2fr 2fr 1fr;
+	gap: var(--spacing-small);
+}
+
+.grid-item {
+	text-align: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 1024px) { 
+	h1 {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		padding: 0;
+	}
+	
+	h1 {
+		font-size: 25px;
+	}
+}
