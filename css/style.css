@@ -1,5 +1,5 @@
 body {
-	background: url(../assets/images/fast_stars_background.jpeg) no-repeat center center fixed; 
+	background: url(../assets/images/fast_stars_background.jpeg) no-repeat center center fixed; /* https://www.vecteezy.com/vector-art/21594146-abstract-background-motion-in-cosmos-travel-in-spase-with-super-speed-blurred-stars-light-in-lines-vector-illustration */
 	background-size: cover;
 	padding-left: var(--spacing-medium);
 	padding-right: var(--spacing-medium);
