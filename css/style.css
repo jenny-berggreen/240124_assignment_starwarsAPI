@@ -28,6 +28,7 @@ h1 {
 
 .back-button-container {
 	grid-area: 1 / 1 / 2 / 2;
+	z-index: 1;
 }
 
 .grid-container__sub-page {
