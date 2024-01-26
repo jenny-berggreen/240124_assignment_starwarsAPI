@@ -49,6 +49,11 @@ h3 {
 	border-radius: var(--border-radius);
 }
 
+.back-button:hover {
+	cursor: pointer;
+	border-color: var(--color-secondary);
+}
+
 .grid-container__sub-page {
 	height: 150vh;
 	grid-template-columns: repeat(3, 1fr);
@@ -155,6 +160,11 @@ h3 {
 
 	h3 {
 		font-size: 1rem;
+	}
+
+	.back-button-container {
+		align-items: start;
+		padding: var(--spacing-medium);
 	}
 
 	.grid-container__sub-page {
