@@ -10,7 +10,7 @@
 	font-family: 'Inter-Bold';
 
 	background-color: rgba(0, 0, 0, 0.7);
-	border: solid 3px yellow;
+	border: solid 3px var(--color-primary);
 	border-radius: var(--border-radius);
 
 	color: white;
@@ -19,7 +19,7 @@
 .grid-item-category:hover {
 	cursor: pointer;
 	background-color: rgba(0, 0, 0, 0.9);
-	border-color: blueviolet;
+	border-color: var(--color-secondary);
 }
 
 .grid-container__index h1 {

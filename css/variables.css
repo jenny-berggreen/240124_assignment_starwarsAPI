@@ -4,7 +4,8 @@
 	--color-foreground: #000000;
 	--color-background: #ffffff;
 
-	--color-primary: #yellow;
+	--color-primary: #fff200;
+	--color-secondary: #b700ff;
 
 	--border-radius: 5px;
 	--border-radius-max: 50px;

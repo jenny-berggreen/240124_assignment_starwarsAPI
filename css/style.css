@@ -8,7 +8,7 @@ body {
 h1 {
 	font-size: 40px;
 	font-family: 'Inter-Bold';
-	color: yellow;
+	color: var(--color-primary);
 }
 
 .grid-container {
@@ -31,6 +31,10 @@ h1 {
 	z-index: 1;
 }
 
+.back-button {
+
+}
+
 .grid-container__sub-page {
 	height: 150vh;
 	grid-template-columns: repeat(3, 1fr);
@@ -43,7 +47,7 @@ h1 {
 
 .grid-item__record {
 	background-color: rgba(0, 0, 0, 0.7);
-	border: solid 3px yellow;
+	border: solid 3px var(--color-primary);
 	border-radius: var(--border-radius);
 
 	color: white;
