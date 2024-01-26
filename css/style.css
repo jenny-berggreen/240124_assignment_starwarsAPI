@@ -29,10 +29,17 @@ h1 {
 .back-button-container {
 	grid-area: 1 / 1 / 2 / 2;
 	z-index: 1;
+	display: flex;
+	align-items: center;
 }
 
 .back-button {
-
+	font-size: 1.5rem;
+	padding: var(--spacing-x-small) var(--spacing-small) var(--spacing-x-small) var(--spacing-small);
+	background-color: var(--color-foreground);
+	color: var(--color-background);
+	border: solid 3px var(--color-primary);
+	border-radius: var(--border-radius);
 }
 
 .grid-container__sub-page {
