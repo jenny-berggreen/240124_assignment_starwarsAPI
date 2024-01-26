@@ -6,14 +6,15 @@
 }
 
 .grid-item-category {
-	font-size: 30px;
-	font-family: 'Inter-Bold';
-
 	background-color: rgba(0, 0, 0, 0.7);
 	border: solid 3px var(--color-primary);
 	border-radius: var(--border-radius);
 
 	color: white;
+}
+
+.grid-item-category h2 {
+	font-family: 'Inter-Bold';
 }
 
 .grid-item-category:hover {
@@ -45,10 +46,6 @@
 /* -------------------------------- medium screens  ------------------------------------- */
 
 @media only screen and (max-width: 1024px) {
-	.grid-item-category {
-		font-size: 25px;
-	}
-
 	.grid-container__index {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: 2fr 2fr 2fr 0.5fr;
@@ -74,10 +71,6 @@
 /* -------------------------------- small screens ------------------------------------- */
 
 @media only screen and (max-width: 600px) {
-	.grid-item-category {
-		font-size: 20px;
-	}
-
 	.grid-container__index {
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;

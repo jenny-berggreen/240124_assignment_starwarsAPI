@@ -6,9 +6,17 @@ body {
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 3rem;
 	font-family: 'Inter-Bold';
 	color: var(--color-primary);
+}
+
+h2 {
+	font-size: 2.3rem;
+}
+
+h3 {
+	font-size: 1.8rem;
 }
 
 .grid-container {
@@ -34,7 +42,6 @@ h1 {
 }
 
 .back-button {
-	font-size: 1.5rem;
 	padding: var(--spacing-x-small) var(--spacing-small) var(--spacing-x-small) var(--spacing-small);
 	background-color: var(--color-foreground);
 	color: var(--color-background);
@@ -88,7 +95,15 @@ h1 {
 
 @media only screen and (max-width: 1024px) { 
 	h1 {
-		font-size: 30px;
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.4rem;
 	}
 
 	.grid-container__sub-page {
@@ -131,7 +146,15 @@ h1 {
 	}
 	
 	h1 {
-		font-size: 25px;
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+	}
+
+	h3 {
+		font-size: 1rem;
 	}
 
 	.grid-container__sub-page {
