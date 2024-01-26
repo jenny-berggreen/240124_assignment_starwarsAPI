@@ -55,9 +55,9 @@ h3 {
 }
 
 .grid-container__sub-page {
-	height: 150vh;
+	height: 200vh;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 0.5fr 1fr 1fr;
+	grid-template-rows: 0.5fr 1fr 1fr 0.2fr;
 }
 
 .grid-container__sub-page h1 {
@@ -114,7 +114,7 @@ h3 {
 	.grid-container__sub-page {
 		height: 250vh;
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 0.5fr 1fr 1fr 1fr;
+		grid-template-rows: 0.5fr 1fr 1fr 1fr 0.2fr;
 	}
 
 	#grid-item__record-1 {
@@ -168,9 +168,9 @@ h3 {
 	}
 
 	.grid-container__sub-page {
-		height: 400vh;
+		height: 450vh;
 		grid-template-columns: 1fr;
-		grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
 	}
 
 	#grid-item__record-1 {
