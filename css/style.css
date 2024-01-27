@@ -19,17 +19,19 @@ h3 {
 	font-size: 1.8rem;
 }
 
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .grid-container {
 	display: grid;
 	gap: var(--spacing-small);
 }
 
-.grid-item {
+.grid-item__header {
 	text-align: center;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
 /* -------------------------------- sub-page ------------------------------------- */
