@@ -13,9 +13,11 @@ const displayFilmData = (data) => {
 	for (let i = 0; i < numberOfRecords; i++) {
 		let filmTitle = data[i].title;
 		let filmEpisode = data[i].episode_id;
+		let filmDirector = data[i].director;
 
 		displayTitle(filmTitle, i, headerLists);
 		displayEpisode(filmEpisode, i, dataLists);
+		displayDirector(filmDirector, i, dataLists);
 	}
 	
 };
@@ -31,5 +33,11 @@ const displayEpisode = (episode, index, dataLists) => {
 	listItem.innerText = "Episode: " + episode;
 	dataLists[index].appendChild(listItem);
 };
+
+const displayDirector = (director, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Director: " + director;
+	dataLists[index].appendChild(listItem);
+  };
 
 fetchSWdata();
