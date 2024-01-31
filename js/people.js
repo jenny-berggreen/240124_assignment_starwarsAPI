@@ -33,34 +33,34 @@ const displayName = (name, index, headerLists) => {
 	headerLists[index].appendChild(listItem);
 };
 
-const displayGender = (gender, index, headerLists) => {
+const displayGender = (gender, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Gender: " + gender;
-	headerLists[index].appendChild(listItem);
+	dataLists[index].appendChild(listItem);
 };
 
-const displaySkinColor = (skinColor, index, headerLists) => {
+const displaySkinColor = (skinColor, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Skin color: " + skinColor;
-	headerLists[index].appendChild(listItem);
+	dataLists[index].appendChild(listItem);
 };
 
-const displayEyeColor = (eyeColor, index, headerLists) => {
+const displayEyeColor = (eyeColor, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Eye color: " + eyeColor;
-	headerLists[index].appendChild(listItem);
+	dataLists[index].appendChild(listItem);
 };
 
-const displayHeight = (height, index, headerLists) => {
+const displayHeight = (height, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Height: " + height;
-	headerLists[index].appendChild(listItem);
+	dataLists[index].appendChild(listItem);
 };
 
-const displayMass = (mass, index, headerLists) => {
+const displayMass = (mass, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Mass: " + mass;
-	headerLists[index].appendChild(listItem);
+	dataLists[index].appendChild(listItem);
 };
 
 fetchSWdata();
