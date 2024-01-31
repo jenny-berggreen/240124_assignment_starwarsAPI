@@ -15,11 +15,13 @@ const displayFilmData = (data) => {
 		let filmEpisode = data[i].episode_id;
 		let filmDirector = data[i].director;
 		let filmProducer = data[i].producer;
+		let filmRelease = data[i].release_date;
 
 		displayTitle(filmTitle, i, headerLists);
 		displayEpisode(filmEpisode, i, dataLists);
 		displayDirector(filmDirector, i, dataLists);
 		displayProducer(filmProducer, i, dataLists);
+		displayRelease(filmRelease, i, dataLists);
 	}
 	
 };
@@ -45,6 +47,12 @@ const displayDirector = (director, index, dataLists) => {
 const displayProducer = (producer, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Producers: " + producer;
+	dataLists[index].appendChild(listItem);
+};
+
+const displayRelease = (release, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Relase date: " + release;
 	dataLists[index].appendChild(listItem);
 };
 
