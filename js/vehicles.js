@@ -16,12 +16,14 @@ const displayVehiclesData = (data) => {
 		let vehicleManufacturer = data[i].manufacturer; 
 		let vehicleClass = data[i].vehicle_class; 
 		let vehicleCapacity = data[i].cargo_capacity; 
+		let vehicleMaxSpeed = data[i].max_atmosphering_speed; 
 
 		displayName(vehicleName, i, headerLists);
 		displayModel(vehicleModel, i, dataLists);
 		displayManufacturer(vehicleManufacturer, i, dataLists);
 		displayClass(vehicleClass, i, dataLists);
 		displayCapacity(vehicleCapacity, i, dataLists);
+		displayMaxSpeed(vehicleMaxSpeed, i, dataLists);
 	}
 };
 
@@ -52,6 +54,12 @@ const displayClass = (vehicle_class, index, dataLists) => {
 const displayCapacity = (capacity, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Cargo capacity: " + capacity;
+	dataLists[index].appendChild(listItem);
+};
+
+const displayMaxSpeed = (maxSpeed, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Max atmosphering speed: " + maxSpeed;
 	dataLists[index].appendChild(listItem);
 };
 
