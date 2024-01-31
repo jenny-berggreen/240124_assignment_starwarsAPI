@@ -13,9 +13,11 @@ const displayVehiclesData = (data) => {
 	for (let i = 0; i < numberOfRecords; i++) {
 		let vehicleName = data[i].name; 
 		let vehicleModel = data[i].model; 
+		let vehicleClass = data[i].vehicle_class; 
 
 		displayName(vehicleName, i, headerLists);
 		displayModel(vehicleModel, i, dataLists);
+		displayClass(vehicleClass, i, dataLists);
 	}
 };
 
@@ -30,5 +32,12 @@ const displayModel = (model, index, dataLists) => {
 	listItem.innerText = "Model: " + model;
 	dataLists[index].appendChild(listItem);
 };
+
+const displayClass = (vehicle_class, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Vehicle class: " + vehicle_class;
+	dataLists[index].appendChild(listItem);
+};
+
 
 fetchSWdata();
