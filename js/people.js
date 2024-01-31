@@ -16,12 +16,14 @@ const displayPeopleData = (data) => {
 		let personSkinColor = data[i].skin_color;
 		let personEyeColor = data[i].eye_color;
 		let personHeight = data[i].height;
+		let personMass = data[i].mass;
 
 		displayName(personName, i, headerLists);
 		displayGender(personGender, i, dataLists);
 		displaySkinColor(personSkinColor, i, dataLists);
 		displayEyeColor(personEyeColor, i, dataLists);
 		displayHeight(personHeight, i, dataLists);
+		displayMass(personMass, i, dataLists);
 	}
 };
 
@@ -52,6 +54,12 @@ const displayEyeColor = (eyeColor, index, headerLists) => {
 const displayHeight = (height, index, headerLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Height: " + height;
+	headerLists[index].appendChild(listItem);
+};
+
+const displayMass = (mass, index, headerLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Mass: " + mass;
 	headerLists[index].appendChild(listItem);
 };
 
