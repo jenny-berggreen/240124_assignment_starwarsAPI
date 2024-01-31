@@ -15,11 +15,13 @@ const displayVehiclesData = (data) => {
 		let vehicleModel = data[i].model; 
 		let vehicleManufacturer = data[i].manufacturer; 
 		let vehicleClass = data[i].vehicle_class; 
+		let vehicleCapacity = data[i].cargo_capacity; 
 
 		displayName(vehicleName, i, headerLists);
 		displayModel(vehicleModel, i, dataLists);
 		displayManufacturer(vehicleManufacturer, i, dataLists);
 		displayClass(vehicleClass, i, dataLists);
+		displayCapacity(vehicleCapacity, i, dataLists);
 	}
 };
 
@@ -44,6 +46,12 @@ const displayManufacturer = (manufacturer, index, dataLists) => {
 const displayClass = (vehicle_class, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Vehicle class: " + vehicle_class;
+	dataLists[index].appendChild(listItem);
+};
+
+const displayCapacity = (capacity, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Cargo capacity: " + capacity;
 	dataLists[index].appendChild(listItem);
 };
 
