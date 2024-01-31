@@ -15,11 +15,13 @@ const displayPlanetsData = (data) => {
 		let planetPopulation = data[i].population;
 		let planetDiameter = data[i].diameter;
 		let planetClimate = data[i].climate;
+		let planetTerrain = data[i].terrain;
 
 		displayName(planetName, i, headerLists);
 		displayPopulation(planetPopulation, i, dataLists);
 		displayDiameter(planetDiameter, i, dataLists);
 		displayClimate(planetClimate, i, dataLists);
+		displayTerrain(planetTerrain, i, dataLists);
 	}
 };
 
@@ -44,6 +46,12 @@ const displayDiameter = (diameter, index, dataLists) => {
 const displayClimate = (climate, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Climate: " + climate;
+	dataLists[index].appendChild(listItem);
+};
+
+const displayTerrain = (terrain, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Terrain: " + terrain;
 	dataLists[index].appendChild(listItem);
 };
 
