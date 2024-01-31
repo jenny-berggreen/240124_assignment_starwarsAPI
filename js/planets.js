@@ -16,12 +16,16 @@ const displayPlanetsData = (data) => {
 		let planetDiameter = data[i].diameter;
 		let planetClimate = data[i].climate;
 		let planetTerrain = data[i].terrain;
+		let planetGravity = data[i].gravity;
+		let planetRotation = data[i].rotation_period;
 
 		displayName(planetName, i, headerLists);
 		displayPopulation(planetPopulation, i, dataLists);
 		displayDiameter(planetDiameter, i, dataLists);
 		displayClimate(planetClimate, i, dataLists);
 		displayTerrain(planetTerrain, i, dataLists);
+		displayGravity(planetGravity, i, dataLists);
+		displayRotation(planetRotation, i, dataLists);
 	}
 };
 
@@ -52,6 +56,18 @@ const displayClimate = (climate, index, dataLists) => {
 const displayTerrain = (terrain, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Terrain: " + terrain;
+	dataLists[index].appendChild(listItem);
+};
+
+const displayGravity = (gravity, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Gravity: " + gravity;
+	dataLists[index].appendChild(listItem);
+};
+
+const displayRotation = (rotation, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Rotation period: " + rotation;
 	dataLists[index].appendChild(listItem);
 };
 
