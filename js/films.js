@@ -14,10 +14,12 @@ const displayFilmData = (data) => {
 		let filmTitle = data[i].title;
 		let filmEpisode = data[i].episode_id;
 		let filmDirector = data[i].director;
+		let filmProducer = data[i].producer;
 
 		displayTitle(filmTitle, i, headerLists);
 		displayEpisode(filmEpisode, i, dataLists);
 		displayDirector(filmDirector, i, dataLists);
+		displayProducer(filmProducer, i, dataLists);
 	}
 	
 };
@@ -38,6 +40,12 @@ const displayDirector = (director, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Director: " + director;
 	dataLists[index].appendChild(listItem);
-  };
+};
+
+const displayProducer = (producer, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Producers: " + producer;
+	dataLists[index].appendChild(listItem);
+};
 
 fetchSWdata();
