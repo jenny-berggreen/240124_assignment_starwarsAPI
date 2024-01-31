@@ -99,12 +99,14 @@ h3 {
 }
 
 .image-container {
-	width: 70%;
-	height: 15rem;
-	border: solid 2px red;
+	display: flex;
+	justify-content: center;
 
-	background: no-repeat center center fixed;
-	background-size: cover;
+	height: 23rem;
+}
+
+.image {
+	height: 100%;
 }
 
 /* -------------------------------- medium screens  ------------------------------------- */
