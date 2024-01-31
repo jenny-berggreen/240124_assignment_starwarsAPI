@@ -13,9 +13,15 @@ const displayFilmData = (data) => {
 	for (let i = 0; i < numberOfRecords; i++) {
 		let filmTitle = data[i].title;
 		let filmEpisode = data[i].episode_id;
+		let filmDirector = data[i].director;
+		let filmProducer = data[i].producer;
+		let filmRelease = data[i].release_date;
 
 		displayTitle(filmTitle, i, headerLists);
 		displayEpisode(filmEpisode, i, dataLists);
+		displayDirector(filmDirector, i, dataLists);
+		displayProducer(filmProducer, i, dataLists);
+		displayRelease(filmRelease, i, dataLists);
 	}
 	
 };
@@ -29,6 +35,24 @@ const displayTitle = (title, index, headerLists) => {
 const displayEpisode = (episode, index, dataLists) => {
 	const listItem = document.createElement('li');
 	listItem.innerText = "Episode: " + episode;
+	dataLists[index].appendChild(listItem);
+};
+
+const displayDirector = (director, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Director: " + director;
+	dataLists[index].appendChild(listItem);
+};
+
+const displayProducer = (producer, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Producers: " + producer;
+	dataLists[index].appendChild(listItem);
+};
+
+const displayRelease = (release, index, dataLists) => {
+	const listItem = document.createElement('li');
+	listItem.innerText = "Relase date: " + release;
 	dataLists[index].appendChild(listItem);
 };
 
