@@ -29,37 +29,61 @@ const displayVehiclesData = (data) => {
 
 const displayName = (name, index, headerLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Name: " + name;
+	const label = document.createElement('span');
+	label.innerText = "Name: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(name));
 	headerLists[index].appendChild(listItem);
 };
 
 const displayModel = (model, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Model: " + model;
+	const label = document.createElement('span');
+	label.innerText = "Model: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(model));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayManufacturer = (manufacturer, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Manufacturer: " + manufacturer;
+	const label = document.createElement('span');
+	label.innerText = "Manufacturer: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(manufacturer));
 	dataLists[index].appendChild(listItem);
 };
 
-const displayClass = (vehicle_class, index, dataLists) => {
+const displayClass = (vehicleClass, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Vehicle class: " + vehicle_class;
+	const label = document.createElement('span');
+	label.innerText = "Vehicle class: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(vehicleClass));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayCapacity = (capacity, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Cargo capacity: " + capacity;
+	const label = document.createElement('span');
+	label.innerText = "Capacity: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(capacity));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayMaxSpeed = (maxSpeed, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Max atmosphering speed: " + maxSpeed;
+	const label = document.createElement('span');
+	label.innerText = "Max speed: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(maxSpeed));
 	dataLists[index].appendChild(listItem);
 };
 
