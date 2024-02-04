@@ -67,9 +67,16 @@ h3 {
 }
 
 .grid-item__record {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-medium);
+
 	background-color: rgba(0, 0, 0, 0.7);
 	border: solid 3px var(--color-primary);
 	border-radius: var(--border-radius);
+
+	padding: var(--spacing-small) var(--spacing-large) var(--spacing-small) var(--spacing-large);
 
 	color: white;
 }
@@ -107,6 +114,18 @@ h3 {
 
 .image {
 	height: 100%;
+}
+
+.header-list li {
+	font-size: 1.5rem;
+}
+
+.data-list {
+	width: 100%;
+}
+
+.data-list li {
+	font-size: 1.2rem;
 }
 
 /* -------------------------------- medium screens  ------------------------------------- */
