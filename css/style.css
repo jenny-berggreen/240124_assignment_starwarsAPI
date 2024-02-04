@@ -116,7 +116,8 @@ h3 {
 	height: 100%;
 }
 
-.header-list li {
+.header-list li,
+.header-list li span {
 	font-size: 1.5rem;
 }
 
@@ -124,8 +125,14 @@ h3 {
 	width: 100%;
 }
 
-.data-list li {
+.data-list li,
+.data-list li span {
 	font-size: 1.2rem;
+}
+
+.list-sub-header {
+	color: var(--color-primary);
+	font-family: 'Inter-Bold';
 }
 
 /* -------------------------------- medium screens  ------------------------------------- */

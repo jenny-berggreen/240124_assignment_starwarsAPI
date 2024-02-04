@@ -28,31 +28,51 @@ const displayFilmData = (data) => {
   
 const displayTitle = (title, index, headerLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Title: " + title;
+	const label = document.createElement('span');
+	label.innerText = "Title: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(title));
 	headerLists[index].appendChild(listItem);
 };
 
 const displayEpisode = (episode, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Episode: " + episode;
+	const label = document.createElement('span');
+	label.innerText = "Episode: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(episode));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayDirector = (director, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Director: " + director;
+	const label = document.createElement('span');
+	label.innerText = "Director: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(director));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayProducer = (producer, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Producers: " + producer;
+	const label = document.createElement('span');
+	label.innerText = "Producer: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(producer));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayRelease = (release, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Relase date: " + release;
+	const label = document.createElement('span');
+	label.innerText = "Release: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(release));
 	dataLists[index].appendChild(listItem);
 };
 
