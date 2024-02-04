@@ -29,37 +29,61 @@ const displayPeopleData = (data) => {
 
 const displayName = (name, index, headerLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Name: " + name;
+	const label = document.createElement('span');
+	label.innerText = "Name: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(name));
 	headerLists[index].appendChild(listItem);
 };
 
 const displayGender = (gender, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Gender: " + gender;
+	const label = document.createElement('span');
+	label.innerText = "Gender: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(gender));
 	dataLists[index].appendChild(listItem);
 };
 
 const displaySkinColor = (skinColor, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Skin color: " + skinColor;
+	const label = document.createElement('span');
+	label.innerText = "Skin color: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(skinColor));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayEyeColor = (eyeColor, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Eye color: " + eyeColor;
+	const label = document.createElement('span');
+	label.innerText = "Eye color: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(eyeColor));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayHeight = (height, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Height: " + height;
+	const label = document.createElement('span');
+	label.innerText = "Height: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(height));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayMass = (mass, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Mass: " + mass;
+	const label = document.createElement('span');
+	label.innerText = "Mass: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(mass));
 	dataLists[index].appendChild(listItem);
 };
 
