@@ -31,43 +31,71 @@ const displayPlanetsData = (data) => {
 
 const displayName = (name, index, headerLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Name: " + name;
+	const label = document.createElement('span');
+	label.innerText = "Name: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(name));
 	headerLists[index].appendChild(listItem);
 };
 
 const displayPopulation = (population, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Population: " + population;
+	const label = document.createElement('span');
+	label.innerText = "Population: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(population));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayDiameter = (diameter, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Diameter: " + diameter;
+	const label = document.createElement('span');
+	label.innerText = "Diameter: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(diameter));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayClimate = (climate, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Climate: " + climate;
+	const label = document.createElement('span');
+	label.innerText = "Climate: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(climate));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayTerrain = (terrain, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Terrain: " + terrain;
+	const label = document.createElement('span');
+	label.innerText = "Terrain: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(terrain));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayGravity = (gravity, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Gravity: " + gravity;
+	const label = document.createElement('span');
+	label.innerText = "Gravity: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(gravity));
 	dataLists[index].appendChild(listItem);
 };
 
 const displayRotation = (rotation, index, dataLists) => {
 	const listItem = document.createElement('li');
-	listItem.innerText = "Rotation period: " + rotation;
+	const label = document.createElement('span');
+	label.innerText = "Rotation: ";
+	label.classList.add('list-sub-header');
+	listItem.appendChild(label);
+	listItem.appendChild(document.createTextNode(rotation));
 	dataLists[index].appendChild(listItem);
 };
 
