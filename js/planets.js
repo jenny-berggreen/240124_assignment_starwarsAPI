@@ -1,7 +1,23 @@
 const fetchSWdata = ()=> {
 	axios.get('https://swapi.dev/api/planets/')
-	.then(data => displayPlanetsData(data.data.results))
+	.then(data => {
+		// Handle successful response
+		displayPlanetsData(data.data.results);
+	  })
+	  .catch(error => {
+		// Handle errors
+		displayErrorMessage(error);
+	  });
 };
+
+const displayErrorMessage = (error) => {
+	const toast = document.querySelector('.toast');
+	toast.textContent = `Error fetching data: ${error}`;
+	toast.style.display = 'block';
+	setTimeout(() => {
+		toast.style.display = 'none';
+	}, 5000);
+}
 
 const displayPlanetsData = (data) => {
 	console.log(data);
