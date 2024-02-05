@@ -35,6 +35,18 @@ h3 {
 }
 
 /* -------------------------------- sub-page ------------------------------------- */
+.toast-container {
+	position: fixed;
+	bottom: 1rem;
+	width: 100%;
+}
+
+.toast {
+	display: none;
+	padding: var(--spacing-small) var(--spacing-medium) var(--spacing-small) var(--spacing-medium);
+	border-radius: var(--border-radius);
+	background-color: rgb(255, 58, 58);
+}
 
 .back-button-container {
 	grid-area: 1 / 1 / 2 / 2;
