@@ -1,3 +1,5 @@
+
+// fetch data from API
 const fetchSWdata = ()=> {
 	axios.get('https://swapi.dev/api/vehicles/')
 	.then(data => {
@@ -12,9 +14,9 @@ const fetchSWdata = ()=> {
 
 const displayErrorMessage = (error) => {
 	const toast = document.querySelector('.toast');
-	toast.textContent = `Error fetching data: ${error}`;
+	toast.textContent = `Error fetching data: ${error}`; // insert error
 	toast.style.display = 'block';
-	setTimeout(() => {
+	setTimeout(() => { // display toast for 5 seconds
 		toast.style.display = 'none';
 	}, 5000);
 }
@@ -26,6 +28,7 @@ const displayVehiclesData = (data) => {
 	const records = document.querySelectorAll('.grid-item__record');
 	let numberOfRecords = records.length;
 
+	// go through array, display data from the first six objects (number of records)
 	for (let i = 0; i < numberOfRecords; i++) {
 		let vehicleName = data[i].name; 
 		let vehicleModel = data[i].model; 
@@ -47,10 +50,10 @@ const displayName = (name, index, headerLists) => {
 	const listItem = document.createElement('li');
 	const label = document.createElement('span');
 	label.innerText = "Name: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(name));
-	headerLists[index].appendChild(listItem);
+	label.classList.add('list-sub-header'); // add class to label to style it yellow
+	listItem.appendChild(label); // append label to list item
+	listItem.appendChild(document.createTextNode(name)); // append title to listitem
+	headerLists[index].appendChild(listItem); // append list item to header list, which is positioned above image
 };
 
 const displayModel = (model, index, dataLists) => {
@@ -60,7 +63,7 @@ const displayModel = (model, index, dataLists) => {
 	label.classList.add('list-sub-header');
 	listItem.appendChild(label);
 	listItem.appendChild(document.createTextNode(model));
-	dataLists[index].appendChild(listItem);
+	dataLists[index].appendChild(listItem); // append list item to data list
 };
 
 const displayManufacturer = (manufacturer, index, dataLists) => {
@@ -103,5 +106,5 @@ const displayMaxSpeed = (maxSpeed, index, dataLists) => {
 	dataLists[index].appendChild(listItem);
 };
 
-
+// call fetch function
 fetchSWdata();

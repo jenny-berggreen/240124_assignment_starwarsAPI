@@ -1,3 +1,5 @@
+
+// fetch data from API
 const fetchSWdata = ()=> {
 	axios.get('https://swapi.dev/api/planets/')
 	.then(data => {
@@ -12,9 +14,9 @@ const fetchSWdata = ()=> {
 
 const displayErrorMessage = (error) => {
 	const toast = document.querySelector('.toast');
-	toast.textContent = `Error fetching data: ${error}`;
+	toast.textContent = `Error fetching data: ${error}`; // insert error
 	toast.style.display = 'block';
-	setTimeout(() => {
+	setTimeout(() => { // display toast for 5 seconds
 		toast.style.display = 'none';
 	}, 5000);
 }
@@ -26,6 +28,7 @@ const displayPlanetsData = (data) => {
 	const records = document.querySelectorAll('.grid-item__record');
 	let numberOfRecords = records.length;
 
+	// go through array, display data from the first six objects (number of records)
 	for (let i = 0; i < numberOfRecords; i++) {
 		let planetName = data[i].name;
 		let planetPopulation = data[i].population;
@@ -49,10 +52,10 @@ const displayName = (name, index, headerLists) => {
 	const listItem = document.createElement('li');
 	const label = document.createElement('span');
 	label.innerText = "Name: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(name));
-	headerLists[index].appendChild(listItem);
+	label.classList.add('list-sub-header'); // add class to label to style it yellow
+	listItem.appendChild(label); // append label to list item
+	listItem.appendChild(document.createTextNode(name)); // append title to listitem
+	headerLists[index].appendChild(listItem); // append list item to header list, which is positioned above image
 };
 
 const displayPopulation = (population, index, dataLists) => {
@@ -62,7 +65,7 @@ const displayPopulation = (population, index, dataLists) => {
 	label.classList.add('list-sub-header');
 	listItem.appendChild(label);
 	listItem.appendChild(document.createTextNode(population));
-	dataLists[index].appendChild(listItem);
+	dataLists[index].appendChild(listItem); // append list item to data list
 };
 
 const displayDiameter = (diameter, index, dataLists) => {
@@ -115,4 +118,5 @@ const displayRotation = (rotation, index, dataLists) => {
 	dataLists[index].appendChild(listItem);
 };
 
+// call fetch function
 fetchSWdata();
