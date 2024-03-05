@@ -19,10 +19,11 @@ const displayErrorMessage = (error) => {
 	setTimeout(() => { // display toast for 5 seconds
 		toast.style.display = 'none';
 	}, 5000);
-}
+};
 
 const displayPlanetsData = (data) => {
 	console.log(data);
+
 	const headerLists = document.querySelectorAll('.header-list');
 	const dataLists = document.querySelectorAll('.data-list');
 	const records = document.querySelectorAll('.grid-item__record');
@@ -30,92 +31,25 @@ const displayPlanetsData = (data) => {
 
 	// go through array, display data from the first six objects (number of records)
 	for (let i = 0; i < numberOfRecords; i++) {
-		let planetName = data[i].name;
-		let planetPopulation = data[i].population;
-		let planetDiameter = data[i].diameter;
-		let planetClimate = data[i].climate;
-		let planetTerrain = data[i].terrain;
-		let planetGravity = data[i].gravity;
-		let planetRotation = data[i].rotation_period;
-
-		displayName(planetName, i, headerLists);
-		displayPopulation(planetPopulation, i, dataLists);
-		displayDiameter(planetDiameter, i, dataLists);
-		displayClimate(planetClimate, i, dataLists);
-		displayTerrain(planetTerrain, i, dataLists);
-		displayGravity(planetGravity, i, dataLists);
-		displayRotation(planetRotation, i, dataLists);
+		const planet = data[i];
+        displayItem("Name", planet.name, i, headerLists);
+        displayItem("Population", planet.population, i, dataLists);
+        displayItem("Diameter", planet.diameter, i, dataLists);
+        displayItem("Climate", planet.climate, i, dataLists);
+        displayItem("Terrain", planet.terrain, i, dataLists);
+        displayItem("Gravity", planet.gravity, i, dataLists);
+        displayItem("Rotation", planet.rotation_period, i, dataLists);
 	}
 };
-
-const displayName = (name, index, headerLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Name: ";
-	label.classList.add('list-sub-header'); // add class to label to style it yellow
-	listItem.appendChild(label); // append label to list item
-	listItem.appendChild(document.createTextNode(name)); // append title to listitem
-	headerLists[index].appendChild(listItem); // append list item to header list, which is positioned above image
-};
-
-const displayPopulation = (population, index, dataLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Population: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(population));
-	dataLists[index].appendChild(listItem); // append list item to data list
-};
-
-const displayDiameter = (diameter, index, dataLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Diameter: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(diameter));
-	dataLists[index].appendChild(listItem);
-};
-
-const displayClimate = (climate, index, dataLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Climate: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(climate));
-	dataLists[index].appendChild(listItem);
-};
-
-const displayTerrain = (terrain, index, dataLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Terrain: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(terrain));
-	dataLists[index].appendChild(listItem);
-};
-
-const displayGravity = (gravity, index, dataLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Gravity: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(gravity));
-	dataLists[index].appendChild(listItem);
-};
-
-const displayRotation = (rotation, index, dataLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Rotation: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(rotation));
-	dataLists[index].appendChild(listItem);
+  
+const displayItem = (label, value, index, lists) => {
+    const listItem = document.createElement('li');
+    const labelElement = document.createElement('span');
+    labelElement.innerText = `${label}: `;
+    labelElement.classList.add('list-sub-header');
+    listItem.appendChild(labelElement);
+    listItem.appendChild(document.createTextNode(value));
+    lists[index].appendChild(listItem);
 };
 
 // call fetch function

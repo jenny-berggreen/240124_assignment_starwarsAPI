@@ -19,10 +19,11 @@ const displayErrorMessage = (error) => {
 	setTimeout(() => { // display toast for 5 seconds
 		toast.style.display = 'none';
 	}, 5000);
-}
+};
 
 const displayFilmData = (data) => {
 	console.log(data);
+
 	const headerLists = document.querySelectorAll('.header-list');
 	const dataLists = document.querySelectorAll('.data-list');
 	const records = document.querySelectorAll('.grid-item__record');
@@ -30,69 +31,23 @@ const displayFilmData = (data) => {
 
 	// go through array, display data from the first six objects (number of records)
 	for (let i = 0; i < numberOfRecords; i++) {
-		let filmTitle = data[i].title;
-		let filmEpisode = data[i].episode_id;
-		let filmDirector = data[i].director;
-		let filmProducer = data[i].producer;
-		let filmRelease = data[i].release_date;
-
-		displayTitle(filmTitle, i, headerLists);
-		displayEpisode(filmEpisode, i, dataLists);
-		displayDirector(filmDirector, i, dataLists);
-		displayProducer(filmProducer, i, dataLists);
-		displayRelease(filmRelease, i, dataLists);
+		const film = data[i];
+        displayItem("Title", film.title, i, headerLists);
+        displayItem("Episode", film.episode_id, i, dataLists);
+        displayItem("Director", film.director, i, dataLists);
+        displayItem("Producer", film.producer, i, dataLists);
+        displayItem("Release", film.release_date, i, dataLists);
 	}
-	
 };
   
-const displayTitle = (title, index, headerLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Title: ";
-	label.classList.add('list-sub-header'); // add class to label to style it yellow
-	listItem.appendChild(label); // append label to list item
-	listItem.appendChild(document.createTextNode(title)); // append title to listitem
-	headerLists[index].appendChild(listItem); // append list item to header list, which is positioned above image
-};
-
-const displayEpisode = (episode, index, dataLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Episode: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(episode));
-	dataLists[index].appendChild(listItem); // append list item to data list
-};
-
-const displayDirector = (director, index, dataLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Director: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(director));
-	dataLists[index].appendChild(listItem);
-};
-
-const displayProducer = (producer, index, dataLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Producer: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(producer));
-	dataLists[index].appendChild(listItem);
-};
-
-const displayRelease = (release, index, dataLists) => {
-	const listItem = document.createElement('li');
-	const label = document.createElement('span');
-	label.innerText = "Release: ";
-	label.classList.add('list-sub-header');
-	listItem.appendChild(label);
-	listItem.appendChild(document.createTextNode(release));
-	dataLists[index].appendChild(listItem);
+const displayItem = (label, value, index, lists) => {
+    const listItem = document.createElement('li');
+    const labelElement = document.createElement('span');
+    labelElement.innerText = `${label}: `;
+    labelElement.classList.add('list-sub-header');
+    listItem.appendChild(labelElement);
+    listItem.appendChild(document.createTextNode(value));
+    lists[index].appendChild(listItem);
 };
 
 // call fetch function
