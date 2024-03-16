@@ -32,7 +32,9 @@ body {
 }
 
 .categories .card {
-	height: 200px;
+	height: 250px;
+	width: 250px;
+	margin: auto;
 	margin-top: 20px;
 	transition: transform 0.2s ease-in;
 }
@@ -102,5 +104,38 @@ body {
 
 .data-list {
 	font-size: 1.2rem;
+}
+
+/* ------------ medium screen ------------*/
+@media(max-width: 1235px) {
+	.container {
+		max-width: 1000px;
+	}
+	
+	.categories .grid {
+		margin: auto;
+		width: 550px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* ------------ small screen ------------*/
+@media(max-width: 676px) {
+	.index-header {
+		font-size: 2.2rem;
+	}
+	.categories {
+		margin: 0;
+		padding: 2rem;
+	}
+	.categories .grid {
+		grid-template-columns: 1fr;
+		width: 0;
+	}
+
+	.categories .card {
+		width: 200px;
+		height: 200px;
+	}
 }
 
