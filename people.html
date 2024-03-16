@@ -11,59 +11,66 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-	<div class="toast-container flex-center">
-		<div class="toast"></div>
+	<div class="toast-container flex py-3">
+		<div class="toast text-center">This is a test</div>
 	</div>
 	
-	<div class="grid-container grid-container__sub-page">
-		<div class="back-button-container">
-			<button class="back-button"><h3>Back</h3></button>
-		</div>
-
-		<h1 class="grid-item grid-item__header flex-center">Star Wars people</h1>
-
-		<div class="grid-item grid-item__record" id="grid-item__record-1">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__people">
-				<!--<img class="image" src="./assets/images/people_luke_skywalker.jpg">  https://starwars.fandom.com/wiki/Luke_Skywalker -->
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-2">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__people">
-				<img class="image" src="./assets/images/people_c3po.jpeg"> <!-- https://www.amazon.com/Bandai-Hobby-Character-12C-3PO-Action/dp/B00T41EW1O -->
-			</div>
-			<ul class="data-list"></ul></div>
-		<div class="grid-item grid-item__record" id="grid-item__record-3">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__people">
-				<img class="image" src="./assets/images/people_r2d2.jpg"> <!-- https://www.europosters.no/plakater/star-wars-episode-vii-r2-d2-v29921 -->
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-4">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__people">
-				<img class="image" src="./assets/images/people_darth_vader.jpg"> <!-- https://printler.com/no/print/116456/ -->
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-5">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__people">
-				<img class="image" src="./assets/images/people_leia_organa.jpg"> <!-- https://en.wikipedia.org/wiki/Princess_Leia -->
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-6">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__people">
-				<img class="image" src="./assets/images/people_owen_lars.jpg"> <!-- https://starwars.fandom.com/wiki/Owen_Lars -->
-			</div>
-			<ul class="data-list"></ul>
-		</div>
+	<div class="back-button-container">
+		<button class="back-button"><h3>Back</h3></button>
 	</div>
+
+	<div class="container">
+		<h1 class="text--yellow text--bold text-center my-4 xl">People</h1>
+	</div>
+
+	<section class="people">
+		<div class="container">
+			<div class="grid grid-3 my-3">
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__people flex">
+						<img class="image" src="./assets/images/people_luke_skywalker.jpg"> <!-- https://starwars.fandom.com/wiki/Luke_Skywalker -->
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__people flex">
+						<img class="image" src="./assets/images/people_c3po.jpeg"> <!-- https://www.amazon.com/Bandai-Hobby-Character-12C-3PO-Action/dp/B00T41EW1O -->
+					</div>
+					<ul class="data-list"></ul></div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__people flex">
+						<img class="image" src="./assets/images/people_r2d2.jpg"> <!-- https://www.europosters.no/plakater/star-wars-episode-vii-r2-d2-v29921 -->
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__people flex">
+						<img class="image" src="./assets/images/people_darth_vader.jpg"> <!-- https://printler.com/no/print/116456/ -->
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__people flex">
+						<img class="image" src="./assets/images/people_leia_organa.jpg"> <!-- https://en.wikipedia.org/wiki/Princess_Leia -->
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__people flex">
+						<img class="image" src="./assets/images/people_owen_lars.jpg"> <!-- https://starwars.fandom.com/wiki/Owen_Lars -->
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<script src="./js/people.js"></script>
 	<script src="./js/script.js"></script>
 </body>

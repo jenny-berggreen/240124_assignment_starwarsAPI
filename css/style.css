@@ -100,7 +100,7 @@ body {
 }
 
 .image-container {
-	width: 170px;
+	height: 240px;
 	margin: 2rem auto;
 }
 
@@ -113,6 +113,10 @@ body {
 
 .films .card {
 	height: 600px;
+}
+
+.people .card {
+	height: 550px;
 }
 
 .list-sub-header {
