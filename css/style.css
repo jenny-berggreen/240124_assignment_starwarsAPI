@@ -4,51 +4,6 @@ body {
 	padding: var(--spacing-small);
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	overflow: auto;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.text--yellow {
-	color: var(--color-primary);
-}
-
-.text--bold {
-	font-family: 'Inter-Bold';
-}
-
-.text--semibold {
-	font-family: 'Inter-SemiBold';
-}
-
-.flex {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 20px;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-}
-
-.grid-3 {
-	grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-4 {
-	grid-template-columns: repeat(4, 1fr);
-}
-
 .card {
 	border: solid 3px var(--color-primary);
 	border-radius: var(--spacing-x-small);
