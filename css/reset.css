@@ -16,6 +16,10 @@ button {
 	border: none;
 }
 
+img {
+	width: 100%;
+}
+
 /* Text sizes */
 .lead {
 	font-size: 20px;
@@ -26,15 +30,15 @@ button {
 }
 
 .md {
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 
 .lg {
-	font-size: 3rem;
+	font-size: 2rem;
 }
 
 .xl {
-	font-size: 4rem;
+	font-size: 3rem;
 }
 
 /* Margin */

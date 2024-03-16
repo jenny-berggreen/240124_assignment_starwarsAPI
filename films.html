@@ -11,59 +11,66 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-	<div class="toast-container flex-center">
-		<div class="toast"></div>
+	<div class="toast-container flex py-3">
+		<div class="toast text-center">This is a test</div>
 	</div>
 	
-	<div class="grid-container grid-container__sub-page">
-		<div class="back-button-container">
-			<button class="back-button"><h3>Back</h3></button>
-		</div>
-		
-		<h1 class="grid-item grid-item__header flex-center">Star Wars films</h1>
-		
-		<div class="grid-item grid-item__record" id="grid-item__record-1">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__films">
-				<img class="image" src="./assets/images/film_episode_iv.jpg">
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-2">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__films">
-				<img class="image" src="./assets/images/film_episode_v.jpg">
-			</div>
-			<ul class="data-list"></ul></div>
-		<div class="grid-item grid-item__record" id="grid-item__record-3">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__films">
-				<img class="image" src="./assets/images/film_episode_vi.jpg">
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-4">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__films">
-				<img class="image" src="./assets/images/film_episode_i.jpg">
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-5">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__films">
-				<img class="image" src="./assets/images/film_episode_ii.jpg">
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-6">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__films">
-				<img class="image" src="./assets/images/film_episode_iii.jpg">
-			</div>
-			<ul class="data-list"></ul>
-		</div>
+	<div class="back-button-container">
+		<button class="back-button"><h3>Back</h3></button>
 	</div>
+
+	<div class="container">
+		<h1 class="text--yellow text--bold text-center my-4 xl">Films</h1>
+	</div>
+
+	<section class="films">
+		<div class="container">
+			<div class="grid grid-3 my-3">
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__films">
+						<img class="image" src="./assets/images/film_episode_iv.jpg">
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__films">
+						<img class="image" src="./assets/images/film_episode_v.jpg">
+					</div>
+					<ul class="data-list"></ul></div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__films">
+						<img class="image" src="./assets/images/film_episode_vi.jpg">
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__films">
+						<img class="image" src="./assets/images/film_episode_i.jpg">
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__films">
+						<img class="image" src="./assets/images/film_episode_ii.jpg">
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container image-container__films">
+						<img class="image" src="./assets/images/film_episode_iii.jpg">
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	
 	<script src="./js/films.js"></script>
 	<script src="./js/script.js"></script>
 </body>

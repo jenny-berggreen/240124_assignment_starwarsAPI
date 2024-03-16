@@ -26,11 +26,11 @@ const displayFilmData = (data) => {
 
 	const headerLists = document.querySelectorAll('.header-list');
 	const dataLists = document.querySelectorAll('.data-list');
-	const records = document.querySelectorAll('.grid-item__record');
-	let numberOfRecords = records.length;
+	const cards = document.querySelectorAll('.card');
+	let numberOfCards = cards.length;
 
-	// go through array, display data from the first six objects (number of records)
-	for (let i = 0; i < numberOfRecords; i++) {
+	// go through array, display data from the first six objects (number of cards)
+	for (let i = 0; i < numberOfCards; i++) {
 		const film = data[i];
         displayItem("Title", film.title, i, headerLists);
         displayItem("Episode", film.episode_id, i, dataLists);
