@@ -10,14 +10,21 @@
 	<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
-	<div class="grid-container grid-container__index">
-		<h1 class="grid-item grid-item__header flex-center">Choose Star Wars category</h1>
-
-		<div class="grid-item grid-item-category flex-center" id="films" tabindex="0"><h2>Films</h2></div>
-		<div class="grid-item grid-item-category flex-center" id="people" tabindex="0"><h2>People</h2></div>
-		<div class="grid-item grid-item-category flex-center" id="planets" tabindex="0"><h2>Planets</h2></div>
-		<div class="grid-item grid-item-category flex-center" id="vehicles" tabindex="0"><h2>Vehicles</h2></div>
+	<div class="container">
+		<h1 class="text--yellow text--bold text-center my-5 lg">Choose Star Wars category</h1>
 	</div>
+
+	<section class="categories">
+		<div class="container">
+			<div class="grid grid-4">
+				<div class="card flex" id="films" tabindex="0"><h2 class="text--semibold">Films</h2></div>
+				<div class="card flex" id="people" tabindex="0"><h2 class="text--semibold">People</h2></div>
+				<div class="card flex" id="planets" tabindex="0"><h2 class="text--semibold">Planets</h2></div>
+				<div class="card flex" id="vehicles" tabindex="0"><h2 class="text--semibold">Vehicles</h2></div>
+			</div>
+		</div>
+	</section>
+
 	<script src="./js/index.js"></script>
 </body>
 </html>
