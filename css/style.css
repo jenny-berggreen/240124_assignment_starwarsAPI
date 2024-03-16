@@ -56,11 +56,6 @@ body {
 	color: white;
 }
 
-.card:hover {
-	border-color: var(--color-secondary);
-	cursor: pointer;
-}
-
 /* ------------ toast ------------*/
 .toast-container {
 	position: fixed;
@@ -83,6 +78,14 @@ body {
 
 .categories .card {
 	height: 200px;
+	margin-top: 20px;
+	transition: transform 0.2s ease-in;
+}
+
+.categories .card:hover {
+	border-color: var(--color-secondary);
+	cursor: pointer;
+	transform: translateY(-15px);
 }
 
 /* ------------ sub-page ------------*/
@@ -101,6 +104,7 @@ body {
 
 .back-button:hover {
 	border-color: var(--color-secondary);
+	cursor: pointer;
 }
 
 .image-container {
