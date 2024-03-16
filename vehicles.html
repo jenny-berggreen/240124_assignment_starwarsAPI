@@ -11,59 +11,67 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-	<div class="toast-container flex-center">
-		<div class="toast"></div>
+
+	<div class="toast-container flex py-3">
+		<div class="toast text-center"></div>
 	</div>
 	
-	<div class="grid-container grid-container__sub-page">
-		<div class="back-button-container">
-			<button class="back-button"><h3>Back</h3></button>
-		</div>
-
-		<h1 class="grid-item grid-item__header flex-center">Star Wars vehicles</h1>
-
-		<div class="grid-item grid-item__record" id="grid-item__record-1">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__vehicles">
-				<img class="image" src="./assets/images/vehicles_sand_crawler.jpg"> <!-- https://starwars.fandom.com/wiki/Sandcrawler -->
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-2">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__vehicles">
-				<img class="image" src="./assets/images/vehicles_skyhopper.jpg"> <!-- https://starwars.fandom.com/wiki/T-16_skyhopper -->
-			</div>
-			<ul class="data-list"></ul></div>
-		<div class="grid-item grid-item__record" id="grid-item__record-3">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__vehicles">
-				<img class="image" src="./assets/images/vehicles_landspeeder.jpg"> <!-- https://starwars.fandom.com/wiki/X-34_landspeeder -->
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-4">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__vehicles">
-				<img class="image" src="./assets/images/vehicles_starfighter.jpg"> <!-- https://rebrickable.com/mocs/MOC-110313/Fukusaku/tie-ln-starfighter/#details -->
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-5">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__vehicles">
-				<img class="image" src="./assets/images/vehicles_snowspeeder.jpg"> <!-- https://www.reddit.com/r/StarWars/comments/ni34o3/t47_snowspeeder_4k_rendered_wallpaper_for_the/ -->
-			</div>
-			<ul class="data-list"></ul>
-		</div>
-		<div class="grid-item grid-item__record" id="grid-item__record-6">
-			<ul class="header-list"></ul>
-			<div class="image-container image-container__vehicles">
-				<img class="image" src="./assets/images/vehicles_tie_bomber.jpg"> <!-- https://swse.fandom.com/wiki/TIE_Bomber -->
-			</div>
-			<ul class="data-list"></ul>
-		</div>
+	<div class="back-button-container">
+		<button class="back-button"><h3>Back</h3></button>
 	</div>
+
+	<div class="container">
+		<h1 class="text--yellow text--bold text-center my-4 xl">Vehicles</h1>
+	</div>
+
+	<section class="vehicles">
+		<div class="container">
+			<div class="grid grid-3 my-3">
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container flex">
+						<img class="image" src="./assets/images/vehicles_sand_crawler.jpg"> <!-- https://starwars.fandom.com/wiki/Sandcrawler -->
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container flex">
+						<img class="image" src="./assets/images/vehicles_skyhopper.jpg"> <!-- https://starwars.fandom.com/wiki/T-16_skyhopper -->
+					</div>
+					<ul class="data-list"></ul></div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container flex">
+						<img class="image" src="./assets/images/vehicles_landspeeder.jpg"> <!-- https://starwars.fandom.com/wiki/X-34_landspeeder -->
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container flex">
+						<img class="image" src="./assets/images/vehicles_starfighter.jpg"> <!-- https://rebrickable.com/mocs/MOC-110313/Fukusaku/tie-ln-starfighter/#details -->
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container flex">
+						<img class="image" src="./assets/images/vehicles_snowspeeder.jpg"> <!-- https://www.reddit.com/r/StarWars/comments/ni34o3/t47_snowspeeder_4k_rendered_wallpaper_for_the/ -->
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+				<div class="card">
+					<ul class="header-list text-center md"></ul>
+					<div class="image-container flex">
+						<img class="image" src="./assets/images/vehicles_tie_bomber.jpg"> <!-- https://swse.fandom.com/wiki/TIE_Bomber -->
+					</div>
+					<ul class="data-list"></ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<script src="./js/vehicles.js"></script>
 	<script src="./js/script.js"></script>
 </body>
